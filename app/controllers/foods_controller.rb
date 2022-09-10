@@ -1,5 +1,7 @@
 class FoodsController < ApplicationController
-  def index; end
+  def index
+    @foods = Food.order(:created_at)
+  end
 
   def new; end
 
