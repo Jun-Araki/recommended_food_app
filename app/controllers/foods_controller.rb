@@ -38,6 +38,8 @@ class FoodsController < ApplicationController
 
   def set_food
     @food = current_user.foods.find_by(id: params[:id])
+    # rubocop:disable all
     redirect_to root_path, alert: "権限がありません" if @food.nil?
+    # rubocop:enable all
   end
 end
