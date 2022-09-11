@@ -3,6 +3,6 @@
   <%= form.text_field :name, required: true %>
   <%= form.label :comment %>
   <%= form.text_area :comment %>
-  <%= form.file_field :image %>
+  <%= form.file_field :image, accept: "image/png,image/jpeg,image/gif" %>
   <%= form.submit "送信" %>
 <% end %>
