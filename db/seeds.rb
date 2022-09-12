@@ -30,4 +30,4 @@ food5.likes.create!(user_id: user3.id)
 # ログイン時に使用するアカウント（変数への代入は不要）
 User.create!(email: email, password: password)
 
-puts "初期データの投入に成功しました！"
+puts "初期データの投入に成功しました！"# rubocop:disable all

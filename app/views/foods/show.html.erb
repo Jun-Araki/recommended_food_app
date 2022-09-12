@@ -5,9 +5,9 @@
 <p>【作成日時】 <%= l @food.created_at %></p>
 <p>
   <% if @food.liked_by?(current_user) %>
-    <%= link_to "★", food_likes_path(@food), method: :delete %>
+  <%= render "like", food: @food %>
   <% else %>
-    <%= link_to "☆", food_likes_path(@food), method: :post %>
+  <%= render "dislike", food: @food %>
   <% end %>
 </p>
 
