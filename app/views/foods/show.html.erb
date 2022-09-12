@@ -3,6 +3,9 @@
 <p>【料理名】 <%= @food.name %></p>
 <p>【コメント】 <%= simple_format(h(@food.comment)) %></p>
 <p>【作成日時】 <%= l @food.created_at %></p>
+<% if @food.image? %>
+  <p><%= image_tag @food.image.url %></p>
+<% end %>
 
 <% if current_user.id == @food.user_id %>
   <p>
