@@ -2,11 +2,22 @@ ja:
   activerecord:
     models:
       food: 料理
+      like: いいね
     attributes:
       food:
         name: 料理名
         comment: コメント
         user: ユーザー
+      like:
+        user: ユーザー
+        user_id: ユーザー
+        food: 料理
+    errors:
+      models:
+        like:
+          attributes:
+            user_id:
+              duplicated: は同じ料理に複数回いいねはできません
   time:
     formats:
       default: '%Y年%-m月%-d日(%a) %-H時%-M分%-S秒'
